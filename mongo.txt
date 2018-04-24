@@ -14,3 +14,4 @@ db.orders.find({orderDate: {$gt: new Date ('2017-01-31')}});
 
 //5. Change the orderTotal from 2/3/2017 to 63 dollars (you do NOT have to ensure the lineItems' unitPrice * quantity add up to the orderTotal)
 db.orders.find({orderDate: new Date ('2017-02-03')});
+db.orders.update({orderDate: new Date ('2017-02-03')}, {$set: {"orderTotal": 63}});
